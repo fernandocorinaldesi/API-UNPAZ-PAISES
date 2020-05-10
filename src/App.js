@@ -79,7 +79,7 @@ class App extends Component {
     }
   };
   eventTop = (e) => {
-    const data = this.state.paises;
+    const data = this.state.paisesFiltrado;
     let topdata = {};
     if (e.target.value === "Poblacion") {
       topdata = data.sort((a, b) => (b.population-a.population ))
