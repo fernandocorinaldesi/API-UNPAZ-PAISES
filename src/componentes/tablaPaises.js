@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import "../css/table.css";
 
-class TablaPaises extends Component {
-  render() {
-    const { listaPaises, tituloTabla } = this.props;
+export default function tablaPaises(props) {
+  const { listaPaises, tituloTabla } = props;
 
     const datosPaises = listaPaises.map((p) => {
       return (
@@ -22,26 +21,24 @@ class TablaPaises extends Component {
       );
     });
 
-    return (
-      <div>
-        <table>
-          <caption>{tituloTabla}</caption>
-          <thead>
-            <tr>
-              <th>Codigo</th>
-              <th>Pais</th>
-              <th>Poblacion</th>
-              <th>Area km²</th>
-              <th>Capital</th>
-              <th>Region</th>
-              <th>SubRegion</th>
-              <th>Bandera</th>
-            </tr>
-          </thead>
-          <tbody>{datosPaises}</tbody>
-        </table>
-      </div>
-    );
-  }
+  return (
+    <div>
+    <table>
+      <caption>{tituloTabla}</caption>
+      <thead>
+        <tr>
+          <th>Codigo</th>
+          <th>Pais</th>
+          <th>Poblacion</th>
+          <th>Area km²</th>
+          <th>Capital</th>
+          <th>Region</th>
+          <th>SubRegion</th>
+          <th>Bandera</th>
+        </tr>
+      </thead>
+      <tbody>{datosPaises}</tbody>
+    </table>
+  </div>
+  )
 }
-export default TablaPaises;
